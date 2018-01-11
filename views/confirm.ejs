@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Confirm</title>
+      <link rel="stylesheet" href="styles.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+    <body>
+     <div class="container">
+       <h2>這是您做好的香水唷！</h2>
+       <div class="form-group row">
+         <label for="example-time-input" class="col-2 col-form-label">創作者姓名</label>
+         <div class="col-10">
+         <input class="form-control" type="text" value="<%= CONFIRM_INFO.producername %>" id="example-time-input">
+         </div>
+      </div>
+       <div class="form-group row">
+          <label for="example-time-input" class="col-2 col-form-label">創作品名</label>
+          <div class="col-10">
+          <input class="form-control" type="text" value="<%= CONFIRM_INFO.productname %>" id="example-time-input">
+          </div>
+      </div>
+      <div class="form-group row">
+         <label for="example-time-input" class="col-2 col-form-label">香水描述</label>
+         <div class="col-10">
+         <input class="form-control" type="text" value="<%= CONFIRM_INFO.description%>" id="example-time-input">
+         </div>
+     </div>
+     <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label">滴數</label>
+        <div class="col-10">
+        <input class="form-control" type="text" value="<%= CONFIRM_INFO.drop %>" id="example-time-input">
+        </div>
+    </div>
+</div>
+    <a href="/payment/product/pay_off"><button type="button" class="btn btn-outline-secondary">我要一次購買</button></a>
+    <a href="/payment/product/dollar_cost_averaging"><button type="button" class="btn btn-outline-secondary">我要使用定期定額方案</button></a>
+    </body>
+</html>

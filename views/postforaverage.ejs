@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> <!-- 請設定 utf8 另外這檔案儲存時也要是 UTF-8 檔首無BOM-->
+<title>ECPAY 金流串接測試</title>
+</head>
+
+<body>
+  <%= REQUIRED_INFO.MerchantTradeDate %>
+<form action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5" method="POST">
+  <input type="hidden" name="MerchantID" value='<%= REQUIRED_INFO.MerchantID %>'>
+  <input type="hidden" name="MerchantTradeNo" value='<%= REQUIRED_INFO.MerchantTradeNo %>'>
+  <input type="hidden" name="MerchantTradeDate" value='<%= REQUIRED_INFO.MerchantTradeDate %>'>
+  <input type="hidden" name="PaymentType" value='<%= REQUIRED_INFO.PaymentType %>'>
+  <input type="hidden" name="TotalAmount" value='<%= REQUIRED_INFO.TotalAmount %>'>
+  <input type="hidden" name="TradeDesc" value='<%= REQUIRED_INFO.TradeDesc %>'>
+  <input type="hidden" name="ItemName" value='<%= REQUIRED_INFO.ItemName %>'>
+  <input type="hidden" name="ReturnURL" value='<%= REQUIRED_INFO.ReturnURL %>'>
+  <input type="hidden" name="ChoosePayment" value='<%= REQUIRED_INFO.ChoosePayment %>'>
+  <input type="hidden" name="CheckMacValue" value='<%= REQUIRED_INFO.CheckMacValue %>'>
+  <input type="hidden" name="EncryptType" value='<%= REQUIRED_INFO.PeriodAmount %>'>
+  <input type="hidden" name="EncryptType" value='<%= REQUIRED_INFO.PeriodType %>'>
+  <input type="hidden" name="EncryptType" value='<%= REQUIRED_INFO.Frequency %>'>
+  <input type="hidden" name="EncryptType" value='<%= REQUIRED_INFO.ExecTimes %>'>
+  <input type="hidden" name="EncryptType" value='<%= REQUIRED_INFO.PeriodReturnURL %>'>
+
+  <button type="submit">付款</button>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Perfumes</title>
+      <link rel="stylesheet" href="styles.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+    <body>
+      <div style="width: 30%; margin:25px auto">
+    <form action="/confirm" method="POST">
+        <h4>創作者姓名</h4>
+        <div class="form-group">
+          <!--Make it a form group but have space-->
+           <!--for the name blank-->
+        <input class="form-control" type="text" name="producername" placeholder="姓名必填">
+        </div>
+        <h4>創作者品名</h4>
+        <div class="form-group">
+          <!--Make it a form group but have space-->
+           <!--for the name blank-->
+         <input class="form-control" type="text" name="productname" placeholder="品名必填">
+        </div>
+        <h4>公開狀態</h4>
+        <div class="form-group">
+          <!--Make it a form group but have space-->
+           <!--for the name blank-->
+          <label class="select">
+            <select name="visibility" class="scents-categories">
+            <option  value="PUBLIC" selected>公開</option>
+            <option selected value="PRIVATE">私密</option>
+            <!--option  value="PROTECTED">半公開</option-->
+       </select>
+        </div>
+        <h4>香水描述</h4>
+        <div class="form-group">
+          <!--Make it a form group but have space-->
+           <!--for the name blank-->
+        <label class="textarea textarea-resizable">
+         <textarea name="description" rows="5"></textarea>
+        </label>
+        </div>
+        <h4>香水選擇</h4>
+        <div class="form-group">
+          <select id="fragrancefeeling">
+          <option value="choice">選擇你愛的味道</option>
+           <option value="apple">蘋果</option>
+           <option value="orange">橘子</option>
+           <option value="banana">香蕉</option>
+           <option value="strawberry">草莓</option>
+          </select>
+
+          <select id="fragrancemodel">
+          <option value="所選之香味分子">所選之香味分子</option>
+          <option value="M11">M11</option>
+           <option value="A15">A15</option>
+           <option value="B66">B66</option>
+           <option value="C9">C9</option>
+           <option value="D88">D88</option>
+          </select>
+          <input type="number" name="drop" placeholder="滴數" step="1" min="0" max="6">
+
+        </div>
+
+    <button class="btn btn-lg btn-primary btn-default btn-block">Submit!!!</button>
+        </div>
+    </form>
+  </div>
+    </body>
+</html>
