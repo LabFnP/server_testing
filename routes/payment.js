@@ -42,7 +42,6 @@ router.post('/product/pay_off', (request, response, next) => {
       EncryptType: EncryptType,
     };
     response.render('post.ejs', { REQUIRED_INFO: REQUIRED_INFO });
-    console.log(REQUIRED_INFO);
   });
 
 //part for the dollar cost averaging
@@ -85,7 +84,6 @@ router.post('/product/dollar_cost_averaging', (request, response, next) => {
                   ExecTimes: ExecTimes,
                   PeriodReturnURL: PeriodReturnURL,
                 };
-          console.log(REQUIREDAVG_INFO);
           response.render('postforaverage.ejs', { REQUIREDAVG_INFO: REQUIREDAVG_INFO });
 
         });

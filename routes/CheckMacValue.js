@@ -97,6 +97,5 @@ exports.average_value = function (MerchantID, PaymentType, TotalAmount, TradeDes
   const lowertherevise = revisedres.toLowerCase();
   const SHAvalue = sha256(lowertherevise);
   const UpperSHA = SHAvalue.toUpperCase();
-  console.log(UpperSHA);
   return UpperSHA;
 };
